@@ -11,4 +11,6 @@ dynamic main() {
       r'(fix|feat|wip|none|chore|refactor|doc|style|test)\(\w+\):\s?.+';
   final regExp = RegExp(normalExp);
 
+  final valid = regExp.hasMatch(commitMessage);
+  if (!valid) exitCode = 1;
 }
