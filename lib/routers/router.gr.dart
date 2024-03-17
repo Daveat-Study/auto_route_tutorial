@@ -18,7 +18,9 @@ abstract class $AppRouter extends _i2.RootStackRouter {
   @override
   final Map<String, _i2.PageFactory> pagesMap = {
     MyHomeRoute.name: (routeData) {
-      final args = routeData.argsAs<MyHomeRouteArgs>();
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<MyHomeRouteArgs>(
+          orElse: () => MyHomeRouteArgs(title: pathParams.getString('title')));
       return _i2.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: _i1.MyHomePage(
@@ -43,6 +45,7 @@ class MyHomeRoute extends _i2.PageRouteInfo<MyHomeRouteArgs> {
             key: key,
             title: title,
           ),
+          rawPathParams: {'title': title},
           initialChildren: children,
         );
 

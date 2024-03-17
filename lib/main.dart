@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
 
 @RoutePage()
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+
+  const MyHomePage({super.key, @pathParam required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
