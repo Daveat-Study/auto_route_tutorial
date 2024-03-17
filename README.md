@@ -1,3 +1,5 @@
+Source: https://medium.com/@antonio.tioypedro1234/flutter-auto-route-guide-9ac405e8a941
+
 You don't necessarily *need* to use auto_route on Flutter, but it offers several advantages over the default Flutter navigation approach that can make your development process more efficient and maintainable, especially for complex applications. Here's a breakdown of the pros and cons:
 
 **Default Flutter Navigation:**
